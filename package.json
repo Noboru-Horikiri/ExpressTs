@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./dist/bin/www",
-    "dev": "ts-node-dev ./src/bin/www"
+    "dev": "ts-node-dev ./src/bin/www",
+    "eslint": "eslint src/**/*.ts"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -21,6 +22,9 @@
     "@types/http-errors": "^2.0.5",
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "eslint": "^9.34.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2"
   }

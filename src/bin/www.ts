@@ -53,7 +53,7 @@ function normalizePort(val: string): number | string | boolean {
 /**
  * Event listener for HTTP server "error" event.
  */
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function onError(error: any): void {
   if (error.syscall !== "listen") {
     throw error;
@@ -65,13 +65,14 @@ function onError(error: any): void {
   switch (error.code) {
     case "EACCES":
       console.error(bind + " requires elevated privileges");
-      process.exit(1);
+      break;
     case "EADDRINUSE":
       console.error(bind + " is already in use");
-      process.exit(1);
+      break;
     default:
       throw error;
   }
+  process.exit(1);
 }
 
 /**
