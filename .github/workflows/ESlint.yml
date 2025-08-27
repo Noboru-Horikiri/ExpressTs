@@ -15,4 +15,4 @@ jobs:
                 eslint_flags: './**/*.ts'
                 fail_on_error: 'true'
           - name: eslint
-            run: npm run lint
+            run: npm run eslint
