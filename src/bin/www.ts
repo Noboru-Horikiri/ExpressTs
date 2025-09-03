@@ -65,7 +65,7 @@ function onError(error: any): void {
   switch (error.code) {
     case "EACCES":
       console.error(bind + " requires elevated privileges");
-      break;
+      // break;
     case "EADDRINUSE":
       console.error(bind + " is already in use");
       // break;
